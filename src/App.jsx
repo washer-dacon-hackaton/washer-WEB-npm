@@ -11,7 +11,6 @@ import "./App.css";
 import PostPage from "./pages/PostPage";
 
 // 페이지
-
 function App() {
   return (
     <Routes>
@@ -23,6 +22,7 @@ function App() {
         <Route path={`/test`} element={<TestPage></TestPage>}></Route>
       </Route>
     </Routes>
+
   );
 }
 
