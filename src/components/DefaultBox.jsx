@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { typo, palette } from "../shared/styles/index";
-import { Flex } from "../shared/utils/Wrapper";
+import { Flex, Space } from "../shared/utils/Wrapper";
 
 const Wrapper = styled(Flex)`
   width: 1060px;
@@ -32,6 +32,7 @@ export const DefaultBox = ({ title, description, children }) => {
       <div className="box-header">
         <div className="box-title">{title}</div>
         <div className="box-description">{description}</div>
+        <Space height={8}></Space>
       </div>
       {children}
     </Wrapper>

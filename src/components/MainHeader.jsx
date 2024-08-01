@@ -20,7 +20,7 @@ export const MainHeader = () => {
   return (
     <Wrapper justify={"space-between"}>
       <div className="header-text">오늘 하루는 어떠셨나요?</div>
-      <Button text={"감정 일기장 작성하기"}></Button>
+      <Button>{"감정 일기장 작성하기"}</Button>
     </Wrapper>
   );
 };

@@ -30,7 +30,7 @@ export const HappyScore = ({ user, month, isMore }) => {
   return (
     <Wrapper direction={"column"}>
       <div className="score-month">{monthString}</div>
-      <div className="score-num">{user.score[month]}</div>
+      <div className="score-num">{user.score}</div>
       {isMore ? (
         <LinkButton
           text={"자세히 보기"}

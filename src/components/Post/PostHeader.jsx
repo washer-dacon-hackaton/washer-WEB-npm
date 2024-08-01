@@ -30,7 +30,7 @@ export const PostHeader = () => {
           {"사소한 행복이라도 공유하며 어제보다 행복한 오늘이 되어봐요!"}
         </div>
       </div>
-      <Button text={"감정 일기장 작성하기"}></Button>
+      <Button>{"행복 글 작성하기"}</Button>
     </Wrapper>
   );
 };
