@@ -1,4 +1,4 @@
-import Box2 from "./components/Report/Box2";
+import Box2 from "../Report/Box2";
 
 function Box2board() {
   const containerStyle = {

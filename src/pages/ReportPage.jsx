@@ -9,6 +9,9 @@ const ReportPage = () => {
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
+      <h1>dfa</h1>
+
+
     </Wrapper>
   );
 };

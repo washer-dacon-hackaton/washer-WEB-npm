@@ -27,6 +27,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+
   },
   buttonContainer: {
     display: 'flex',

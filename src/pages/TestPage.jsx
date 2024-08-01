@@ -12,6 +12,7 @@ const MainPage = () => {
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
+      <h1>ds</h1>
       <ContentBox text={"하이요"}></ContentBox>
       <PostBox
         title={"하이"}
