@@ -21,11 +21,7 @@ const Btn = styled.button`
 
 export const IconButton = ({ icon, text, link }) => {
   return (
-    <Btn
-      onClick={() => {
-        link;
-      }}
-    >
+    <Btn onClick={() => link}>
       {icon}
       <div className="ibtn-text">{text}</div>
     </Btn>

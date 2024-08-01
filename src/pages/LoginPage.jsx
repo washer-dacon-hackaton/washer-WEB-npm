@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Flex, Space } from "../shared/utils/Wrapper";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_drawing.png";
 import { typo, palette } from "../shared/styles";
 
 import userAPI from "../apis/userAPI";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useSetAtom } from "jotai";
 import { routeAtom } from "../shared/atom";
+import { LOGIN_TITLE } from "../shared/utils/constants";
 
 const LoginPage = () => {
   const setRoute = useSetAtom(routeAtom);
@@ -38,9 +39,9 @@ const LoginPage = () => {
     <Wrapper direction={"column"}>
       <Space height={120}></Space>
       <div className="login">
-        <img src={logo} width={"240px"} />
+        <img src={logo} width={"320px"} />
         <Space height={16}></Space>
-        <div className="login-title">{"우리행복 | 우울이 행복이 되도록"}</div>
+        <div className="login-title">{LOGIN_TITLE}</div>
       </div>
       <Space height={40}></Space>
 

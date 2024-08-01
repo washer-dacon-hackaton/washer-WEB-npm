@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { typo, palette } from "../shared/styles/index";
 import { Flex } from "../shared/utils/Wrapper";
 import { Button } from "./Button/Button";
+import { MAIN_HEADER } from "../shared/utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled(Flex)`
   background-color: ${palette.Gray.white};
@@ -17,10 +19,13 @@ const Wrapper = styled(Flex)`
 `;
 
 export const MainHeader = () => {
+  let navigate = useNavigate();
   return (
     <Wrapper justify={"space-between"}>
-      <div className="header-text">오늘 하루는 어떠셨나요?</div>
-      <Button>{"감정 일기장 작성하기"}</Button>
+      <div className="header-text">{MAIN_HEADER}</div>
+      <Button onClick={() => navigate("/user/")}>
+        {"감정 일기장 작성하기"}
+      </Button>
     </Wrapper>
   );
 };

@@ -3,7 +3,7 @@ import { typo, palette } from "../../shared/styles/index";
 
 export const Button = styled.button`
   ${typo.Body.b2};
-  background-color: ${palette.Sub.blue};
+  background-color: ${palette.Primary.purple100};
   color: ${palette.Gray.white};
 
   border-radius: 40px;

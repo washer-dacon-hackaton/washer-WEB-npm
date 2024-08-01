@@ -17,15 +17,16 @@ const Wrapper = styled(Flex)`
   }
   .posts-list {
     display: flex;
-    gap: 8px;
+    width: stretch;
+    justify-content: space-between;
   }
 `;
 
-export const HappyPosts = ({ title, list }) => {
+export const HappyPosts = ({ title, children }) => {
   return (
     <Wrapper direction={"column"} align={"flex-start"}>
       <div className="posts-title">{title}</div>
-      {list}
+      {children}
       <LinkButton text={"더보기"}></LinkButton>
     </Wrapper>
   );

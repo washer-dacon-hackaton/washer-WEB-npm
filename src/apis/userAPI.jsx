@@ -8,6 +8,10 @@ const userAPI = {
     });
     return response.data;
   },
+  GET_USER_INFO: async ({ Name }) => {
+    const response = await client.get(`/user/${Name}`);
+    return response.data; // name, country, lang
+  },
 };
 
 export default userAPI;

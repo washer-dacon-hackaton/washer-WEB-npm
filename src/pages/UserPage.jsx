@@ -14,11 +14,14 @@ const Wrapper = styled(Flex)`
 const MainPage = () => {
   const setRoute = useSetAtom(routeAtom);
   useEffect(() => setRoute("유저 페이지"), [setRoute]);
+
+  const user = localStorage.getItem("name");
+
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
       <ProfileBox
-        user={{ name: "이혁", country: "대한민국", lang: "한국어" }}
+        user={{ name: user, country: "대한민국", lang: "한국어" }}
       ></ProfileBox>
       <DefaultBox
         title={"오늘의 감정 일기장"}

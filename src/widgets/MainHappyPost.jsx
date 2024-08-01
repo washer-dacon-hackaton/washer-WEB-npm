@@ -19,15 +19,16 @@ export const MainHappyPost = () => {
   return (
     <Wrapper direction={"column"}>
       <PostHeader></PostHeader>
-      <HappyPosts title={"인기 행복글"} list={LIST}></HappyPosts>
-      <HappyPosts title={"최신 행복글"} list={LIST}></HappyPosts>
-      <HappyPosts title={"추천 행복글"} list={LIST}></HappyPosts>
+      <HappyPosts title={"인기 행복글"}>{LIST}</HappyPosts>
+      <HappyPosts title={"최신 행복글"}>{LIST}</HappyPosts>
+      <HappyPosts title={"추천 행복글"}>{LIST}</HappyPosts>
     </Wrapper>
   );
 };
 
 let LIST = (
   <div className="posts-list">
+    <HappyPost id={1}></HappyPost>
     <HappyPost id={1}></HappyPost>
     <HappyPost id={1}></HappyPost>
     <HappyPost id={1}></HappyPost>
