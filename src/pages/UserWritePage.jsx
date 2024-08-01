@@ -37,9 +37,9 @@ const UserWritePage = () => {
 const styles = {
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexDirection:"column",
     gap: '10px',
-    justifyContent: 'center',
+    alignItems: 'center',
   }
 };
 

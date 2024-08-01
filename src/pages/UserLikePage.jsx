@@ -17,6 +17,7 @@ const UserLikePage = () => {
     console.log(`좋아요 클릭됨': ${id}`);
   };
 
+  
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
@@ -39,9 +40,9 @@ const UserLikePage = () => {
 const styles = {
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexDirection:"column",
     gap: '10px',
-    justifyContent: 'center',
+    alignItems: 'center',
   }
 };
 

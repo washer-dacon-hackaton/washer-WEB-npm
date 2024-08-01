@@ -30,12 +30,12 @@ const data1 = {
   datasets: [
     {
       label: "행복점수",
-      data: [32, 50, 51, 60, 51, 95, 80],
+      data: [32, 50, 45, 30, 20, 10, 50],
       backgroundColor: "rgba(12, 211, 255, 0.2)", // Semi-transparent background
-      borderColor: "#0CD3FF",
+      borderColor: "#8f00ff",
       borderWidth: 3, // Thicker line
       pointBackgroundColor: "#fff",
-      pointBorderColor: "#0CD3FF",
+      pointBorderColor: "##8f00ff",
       pointBorderWidth: 2,
       pointRadius: 6, // Larger data points
       fill: true, // Fill area under the line
@@ -71,14 +71,17 @@ const options = {
         borderDash: [5, 5], // Dash pattern for y-axis grid lines
         drawBorder: false, // Hide the border line
       },
-      beginAtZero: true,
       ticks: {
         color: "#333", // Darker color for y-axis labels
         font: {
           size: 14, // Larger font size for y-axis labels
           family: "'Arial', sans-serif", // Font family for labels
         },
+        stepSize: 5, // Step size for y-axis
+        min: 1, // Minimum value for y-axis
+        max: 50, // Maximum value for y-axis
       },
+      beginAtZero: false, // Remove this if you want to start from 1
     },
   },
   plugins: {
@@ -107,7 +110,7 @@ const options = {
 function LineChart() {
   return (
     <div>
-      <h1 style={{ fontSize: 28, textAlign: "center", color: "#333", marginBottom: "20px" }}>행복점수 그래프</h1>
+      <h1 style={{ fontSize: 18, textAlign: "center", color: "#333", marginBottom: "10px" }}>행복점수 그래프</h1>
       <div style={{ width: '100%', height: '400px', margin: "0 auto" }}> {/* Adjusted width and height */}
         <Line options={options} data={data1} />
       </div>

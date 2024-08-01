@@ -1,13 +1,22 @@
+import styled from "@emotion/styled";
+import { Button } from "../Button/Button"; // Button 컴포넌트 경로에 맞게 수정
+
 function PostBox1({ title, content, onEdit, onDelete }) {
   return (
     <div style={styles.box}>
       <h3>{title}</h3>
       <p>{content}</p>
       <div style={styles.buttonContainer}>
-        <button style={styles.button} onClick={() => console.log('더보기 클릭됨')}>더보기 {" >"} </button>
+        <Button onClick={() => console.log('더보기 클릭됨')}>
+          더보기 {" >"} 
+        </Button>
         <div style={styles.buttonGroup}>
-          <button style={styles.button} onClick={onEdit}>수정</button>
-          <button style={styles.button} onClick={onDelete}>삭제</button>
+          <Button onClick={onEdit}>
+            수정
+          </Button>
+          <Button onClick={onDelete}>
+            삭제
+          </Button>
         </div>
       </div>
     </div>
@@ -17,10 +26,10 @@ function PostBox1({ title, content, onEdit, onDelete }) {
 const styles = {
   box: {
     width: "800px",
-    height: "100px",
+    height: "150px", // 높이 조정 가능
     padding: "20px",
-    borderRadius: "20px 20px 20px 20px",
-    border: "1px solid black",  // 적절한 border 스타일을 넣어야 합니다.
+    borderRadius: "20px",
+    border: "1px solid black", 
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -32,15 +41,7 @@ const styles = {
   },
   buttonGroup: {
     display: 'flex',
-    gap: '10px',
-  },
-  button: {
-    backgroundColor: 'green',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    padding: '5px 10px',
-    cursor: 'pointer',
+    gap: '5px', // 버튼 사이의 간격 조정
   }
 };
 
