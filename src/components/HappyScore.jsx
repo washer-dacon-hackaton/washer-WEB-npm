@@ -4,7 +4,8 @@ import { Flex } from "../shared/utils/Wrapper";
 import { LinkButton } from "./Button/LinkButton";
 
 const Wrapper = styled(Flex)`
-  background-color: ${palette.Gray.gray50};
+  background-color: ${palette.Gray.white};
+  border: 1px solid ${palette.Gray.gray10};
   gap: 0px;
   width: 240px;
   height: 240px;

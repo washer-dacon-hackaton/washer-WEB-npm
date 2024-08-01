@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { typo, palette } from "../shared/styles/index";
-import { Flex } from "../shared/utils/Wrapper";
-import { SmallLinkButton } from "./Button/SmallLinkButton";
-import { SmallLike } from "../assets/icons/SmallLike";
+import { typo, palette } from "../../shared/styles/index";
+import { Flex } from "../../shared/utils/Wrapper";
+import { SmallLinkButton } from "../Button/SmallLinkButton";
+import { SmallLike } from "../../assets/icons/SmallLike";
 
 const Wrapper = styled(Flex)`
   width: 240px;

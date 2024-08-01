@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { typo, palette } from "../shared/styles/index";
-import { Flex } from "../shared/utils/Wrapper";
-import { LinkButton } from "./Button/LinkButton";
+import { typo, palette } from "../../shared/styles/index";
+import { Flex } from "../../shared/utils/Wrapper";
+import { LinkButton } from "../Button/LinkButton";
 
 const Wrapper = styled(Flex)`
   width: 1020px;

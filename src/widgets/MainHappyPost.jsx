@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { palette } from "../shared/styles/index";
 import { Flex } from "../shared/utils/Wrapper";
-import { PostHeader } from "../components/PostHeader";
-import { HappyPosts } from "../components/HappyPosts";
-import { HappyPost } from "../components/HappyPost";
+import { PostHeader } from "../components/Post/PostHeader";
+import { HappyPosts } from "../components/Post/HappyPosts";
+import { HappyPost } from "../components/Post/HappyPost";
 
 const Wrapper = styled(Flex)`
   width: 1060px;

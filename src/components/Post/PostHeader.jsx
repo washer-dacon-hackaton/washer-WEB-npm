@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { typo, palette } from "../shared/styles/index";
-import { Flex } from "../shared/utils/Wrapper";
-import { Button } from "./Button/Button";
+import { typo, palette } from "../../shared/styles/index";
+import { Flex } from "../../shared/utils/Wrapper";
+import { Button } from "../Button/Button";
 
 const Wrapper = styled(Flex)`
   background-color: ${palette.Gray.white};

@@ -4,6 +4,7 @@ import { Flex } from "../shared/utils/Wrapper";
 import { Button } from "./Button/Button";
 
 const Wrapper = styled(Flex)`
+  width: 1060px;
   padding: 20px;
   border-radius: 20px;
   gap: 20px;
