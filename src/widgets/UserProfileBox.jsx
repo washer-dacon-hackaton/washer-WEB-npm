@@ -40,7 +40,14 @@ const Wrapper = styled(Flex)`
 export const ProfileBox = ({ user }) => {
   return (
     <Wrapper direction="column" align="center">
-      <img src={profile} width={240} style={{ borderRadius: "20px" }}></img>{" "}
+      <img
+        src={profile}
+        width={240}
+        style={{
+          borderRadius: "20px",
+          border: `1px solid ${palette.Gray.gray70}`,
+        }}
+      ></img>{" "}
       {/** 우선 유저 프로필을 기본 프로필로 */}
       <div className="profile-user">
         <div className="profile-user-name">{user.name}</div>

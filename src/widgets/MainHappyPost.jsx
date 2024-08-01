@@ -19,18 +19,34 @@ export const MainHappyPost = () => {
   return (
     <Wrapper direction={"column"}>
       <PostHeader></PostHeader>
-      <HappyPosts title={"인기 행복글"}>{LIST}</HappyPosts>
-      <HappyPosts title={"최신 행복글"}>{LIST}</HappyPosts>
-      <HappyPosts title={"추천 행복글"}>{LIST}</HappyPosts>
+      <HappyPosts title={"인기 행복글"}>{LIST1}</HappyPosts>
+      <HappyPosts title={"최신 행복글"}>{LIST2}</HappyPosts>
+      <HappyPosts title={"추천 행복글"}>{LIST3}</HappyPosts>
     </Wrapper>
   );
 };
 
-let LIST = (
+let LIST1 = (
   <div className="posts-list">
     <HappyPost id={1}></HappyPost>
+    <HappyPost id={2}></HappyPost>
+    <HappyPost id={3}></HappyPost>
+    <HappyPost id={4}></HappyPost>
+  </div>
+);
+let LIST2 = (
+  <div className="posts-list">
+    <HappyPost id={4}></HappyPost>
     <HappyPost id={1}></HappyPost>
-    <HappyPost id={1}></HappyPost>
+    <HappyPost id={3}></HappyPost>
+    <HappyPost id={2}></HappyPost>
+  </div>
+);
+let LIST3 = (
+  <div className="posts-list">
+    <HappyPost id={3}></HappyPost>
+    <HappyPost id={2}></HappyPost>
+    <HappyPost id={4}></HappyPost>
     <HappyPost id={1}></HappyPost>
   </div>
 );

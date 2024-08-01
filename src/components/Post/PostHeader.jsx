@@ -31,7 +31,7 @@ export const PostHeader = () => {
         <div className="happypost-title">{"행복 글"}</div>
         <div className="happypost-description">{MAIN_POST_DESC}</div>
       </div>
-      <Button onClick={() => navigate("/user/write")}>
+      <Button onClick={() => navigate("/post/write")}>
         {"행복 글 작성하기"}
       </Button>
     </Wrapper>

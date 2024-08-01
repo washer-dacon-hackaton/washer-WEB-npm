@@ -5,27 +5,37 @@ import { Flex } from "../shared/utils/Wrapper";
 const Wrapper = styled(Flex)`
   display: flex;
   gap: 8px;
-  width: stretch;
+  width: 880px;
 
   border: 1px solid ${palette.Gray.gray30};
   border-radius: 8px;
 
   padding: 24px 24px 20px 24px;
 
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
 
   ${typo.Body.b2};
   background-color: ${palette.Gray.white};
   color: ${palette.Gray.gray100};
 
   paddding: 12px 16px;
+
+  .cbox-title {
+    ${typo.Head.h3};
+    color: ${palette.Gray.gray100};
+  }
+  .cbox-text {
+    height: stretch;
+    ${typo.Body.b2}
+    color: ${palette.Gray.gray90};
+  }
 `;
 
 export const ContentBox = (props) => {
   return (
-    <Wrapper>
-      {props.title ? <div className="cbox-title"> </div> : ""}
+    <Wrapper direction={"column"}>
+      {props.title ? <div className="cbox-title">{props.title} </div> : ""}
       <div className="cbox-text">{props.text}</div>
     </Wrapper>
   );
