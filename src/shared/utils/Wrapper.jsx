@@ -10,4 +10,6 @@ export const Flex = styled.div`
   flex-direction: ${({ direction }) => (direction ? `${direction}` : "row")};
   justify-content: ${({ justify }) => (justify ? `${justify}` : "center")};
   align-items: ${({ align }) => (align ? `${align}` : "center")};
+
+  box-sizing: border-box;
 `;

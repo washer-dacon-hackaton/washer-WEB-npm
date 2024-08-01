@@ -7,7 +7,14 @@ import { Like } from "../assets/icons/Like";
 import { IconButton } from "../components/Button/IconButton";
 
 const Wrapper = styled(Flex)`
-  div {
+  background-color: ${palette.Gray.gray10};
+  width: 1060px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  .profile-user {
+    display: flex;
+    gap: 16px;
     .profile-user-name {
       ${typo.Head.h2};
       color: ${palette.Gray.gray100};
@@ -20,6 +27,11 @@ const Wrapper = styled(Flex)`
       ${typo.Body.b0};
       color: ${palette.Gray.gray70};
     }
+  }
+
+  .profile-btn {
+    display: flex;
+    gap: 20px;
   }
 `;
 
