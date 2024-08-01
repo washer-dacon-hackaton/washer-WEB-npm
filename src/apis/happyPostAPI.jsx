@@ -2,7 +2,7 @@ import client from "./index";
 
 const happyPostAPI = {
   WRITE_HAPPY_POST: async (User, Title, Content) => {
-    const response = await client.post(`/posts/${User.name}/`, {
+    const response = await client.post(`/posts/${User}/`, {
       title: Title,
       content: Content,
     });
