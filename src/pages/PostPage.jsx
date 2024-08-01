@@ -13,8 +13,9 @@ const Wrapper = styled(Flex)`
 
 const PostPage = () => {
   const id = useParams().id;
+  const user = localStorage.getItem("name");
   const { Title, Writer, CreatedAt, Content, AiFeedback } =
-    happyPostAPI.GET_HAPPY_POST({ name: "이혁" }, id);
+    happyPostAPI.GET_HAPPY_POST({ User: user }, id);
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>

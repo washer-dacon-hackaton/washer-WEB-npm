@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Flex, Space } from "../shared/utils/Wrapper";
-import { ProfileBox } from "../widgets/ProfileBox";
+import { ProfileBox } from "../widgets/UserProfileBox";
 import { DefaultBox } from "../components/DefaultBox";
 import { HappyScore } from "../components/HappyScore";
 
@@ -23,15 +23,13 @@ const MainPage = () => {
       <DefaultBox
         title={"지난 행복보고서"}
         description={"지난 기간 동안의 행복 보고서를 확인할 수 있어요."}
-        body={
-          <HappyScore
-            user={{ score: { "2024년 7월": 800 } }}
-            month={"2024년 7월"}
-            isMore={true}
-          ></HappyScore>
-        }
-        isButton={false}
-      ></DefaultBox>
+      >
+        <HappyScore
+          user={{ score: { "2024년 7월": 800 } }}
+          month={"2024년 7월"}
+          isMore={true}
+        ></HappyScore>
+      </DefaultBox>
     </Wrapper>
   );
 };

@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { typo, palette } from "../shared/styles/index";
 import { Flex } from "../shared/utils/Wrapper";
-import { Button } from "./Button/Button";
 
 const Wrapper = styled(Flex)`
   width: 1060px;
@@ -27,12 +26,7 @@ const Wrapper = styled(Flex)`
   }
 `;
 
-export const DefaultBox = ({
-  title,
-  description,
-  children,
-  isButton = false,
-}) => {
+export const DefaultBox = ({ title, description, children }) => {
   return (
     <Wrapper direction={"column"} align={"start"}>
       <div className="box-header">
@@ -40,16 +34,6 @@ export const DefaultBox = ({
         <div className="box-description">{description}</div>
       </div>
       {children}
-      {isButton ? (
-        <Button
-          text={"작성 완료하기"}
-          onClick={() => {
-            console.log("ㅋ");
-          }}
-        ></Button>
-      ) : (
-        <></>
-      )}
     </Wrapper>
   );
 };
