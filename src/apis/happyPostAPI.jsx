@@ -9,6 +9,7 @@ const happyPostAPI = {
     console.log("글쓰기 성공");
     return response.data; // message, post_id
   },
+
   GET_HAPPY_POST: async (User, Id) => {
     const response = await client.get(`/post/${User}/`, {
       post_id: Id,

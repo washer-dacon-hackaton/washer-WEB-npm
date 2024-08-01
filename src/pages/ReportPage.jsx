@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Flex, Space } from "../shared/utils/Wrapper";
+import WordCloud from "../components/Graph/WordCloud";
 
 const Wrapper = styled(Flex)`
   gap: 40px;

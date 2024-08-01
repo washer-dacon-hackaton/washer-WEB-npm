@@ -3,6 +3,8 @@ import { typo, palette } from "../../shared/styles/index";
 import { Flex } from "../../shared/utils/Wrapper";
 import { SmallLinkButton } from "../Button/SmallLinkButton";
 import { SmallLike } from "../../assets/icons/SmallLike";
+import happyPostAPI from "../../apis/happyPostAPI";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled(Flex)`
   width: 240px;
@@ -41,24 +43,27 @@ const Wrapper = styled(Flex)`
   }
 `;
 
-const data = {
-  1: {
-    title: "오늘 너무 행복한 일이 있었어",
-    content:
-      "내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용",
-  },
-};
-
 export const HappyPost = ({ id }) => {
+  // 필요한 API: 페이지를 호출할 때마다 어떤 id로 포스트를 불러와야 하는가?
+  let navigate = useNavigate();
+
+  const user = localStorage.getItem("name");
+  const data = happyPostAPI.GET_HAPPY_POST(user, id);
+
   return (
     <Wrapper direction={"column"} justify={"space-between"}>
       <div className="post-header">
-        <div className="post-title">{data[id].title}</div>
-        <div className="post-content">{data[id].content}</div>
+        <div className="post-title">{data.title}</div>
+        <div className="post-content">{data.content}</div>
       </div>
       <div className="post-footer">
         <SmallLike></SmallLike>
-        <SmallLinkButton text={"더보기"}></SmallLinkButton>
+        <SmallLinkButton
+          text={"더보기"}
+          action={() => {
+            navigate(`/post/${id}`);
+          }}
+        ></SmallLinkButton>
       </div>
     </Wrapper>
   );
