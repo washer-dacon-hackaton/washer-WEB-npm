@@ -3,12 +3,17 @@ import { Flex, Space } from "../shared/utils/Wrapper";
 import { ProfileBox } from "../widgets/UserProfileBox";
 import { DefaultBox } from "../components/DefaultBox";
 import { UserMonthlyHappyReport } from "../widgets/UserMonthlyHappyReport";
+import { useSetAtom } from "jotai";
+import { routeAtom } from "../shared/atom";
+import { useEffect } from "react";
 
 const Wrapper = styled(Flex)`
   gap: 40px;
 `;
 
 const MainPage = () => {
+  const setRoute = useSetAtom(routeAtom);
+  useEffect(() => setRoute("유저 페이지"), [setRoute]);
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>

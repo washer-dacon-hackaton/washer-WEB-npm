@@ -4,10 +4,16 @@ import logo from "../assets/logo.png";
 import { typo, palette } from "../shared/styles";
 
 import userAPI from "../apis/userAPI";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useSetAtom } from "jotai";
+import { routeAtom } from "../shared/atom";
+
 const LoginPage = () => {
+  const setRoute = useSetAtom(routeAtom);
+  useEffect(() => setRoute("로그인 페이지"), [setRoute]);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -42,7 +48,7 @@ const LoginPage = () => {
         <div className="login-input">
           <Input
             id={"email"}
-            pl={"이메일을 입력해주세요."}
+            placeholder={"이메일을 입력해주세요."}
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +56,7 @@ const LoginPage = () => {
           ></Input>
           <Input
             id={"password"}
-            pl={"비밀번호를 입력해주세요."}
+            placeholder={"비밀번호를 입력해주세요."}
             type="text"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

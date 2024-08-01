@@ -6,16 +6,22 @@ import happyPostAPI from "../apis/happyPostAPI";
 import { DefaultBox } from "../components/DefaultBox";
 import { ContentBox } from "../components/ContentBox";
 import { useParams } from "react-router-dom";
+import { useSetAtom } from "jotai";
+import { routeAtom } from "../shared/atom";
+import { useEffect } from "react";
 
 const Wrapper = styled(Flex)`
   gap: 40px;
 `;
 
 const PostPage = () => {
+  const setRoute = useSetAtom(routeAtom);
+
   const id = useParams().id;
   const user = localStorage.getItem("name");
   const { Title, Writer, CreatedAt, Content, AiFeedback } =
     happyPostAPI.GET_HAPPY_POST({ User: user }, id);
+  useEffect(() => setRoute(`${user ? user : ""}의 글`)), [setRoute];
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
