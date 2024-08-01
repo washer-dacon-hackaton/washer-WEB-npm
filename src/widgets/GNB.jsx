@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: ${palette.Gray.white};
 
   border: 1px solid ${palette.Gray.gray30};
   box-sizing: border-box;

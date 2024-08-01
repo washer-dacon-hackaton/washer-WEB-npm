@@ -7,7 +7,9 @@ import { Like } from "../assets/icons/Like";
 import { IconButton } from "../components/Button/IconButton";
 
 const Wrapper = styled(Flex)`
-  background-color: ${palette.Gray.gray10};
+  box-shadow: 0px 0px 4.2px 0px rgba(185, 185, 185, 0.57);
+
+  background-color: ${palette.Gray.white};
   width: 1060px;
   padding: 20px;
   gap: 20px;

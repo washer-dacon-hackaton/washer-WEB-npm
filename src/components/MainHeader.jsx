@@ -4,7 +4,9 @@ import { Flex } from "../shared/utils/Wrapper";
 import { Button } from "./Button/Button";
 
 const Wrapper = styled(Flex)`
-  background-color: ${palette.Gray.gray10};
+  background-color: ${palette.Gray.white};
+  box-shadow: 0px 0px 4.2px 0px rgba(185, 185, 185, 0.57);
+
   width: 1060px;
   padding: 20px;
   border-radius: 20px;

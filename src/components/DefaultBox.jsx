@@ -8,7 +8,8 @@ const Wrapper = styled(Flex)`
   border-radius: 20px;
   gap: 20px;
 
-  background-color: ${palette.Gray.gray10};
+  background-color: ${palette.Gray.white};
+  box-shadow: 0px 0px 4.2px 0px rgba(185, 185, 185, 0.57);
 
   .box-header {
     display: flex;
