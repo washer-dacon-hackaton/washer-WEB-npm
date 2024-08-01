@@ -1,28 +1,20 @@
+import { Routes, Route } from "react-router-dom";
+
+// 레이아웃
+import MainLayout from "./pages/layouts/MainLayout";
+import MainPage from "./pages/MainPage";
+
 import "./App.css";
-import { GNB } from "./widgets/GNB";
-import {} from "react-router-dom";
-import { ProfileBox } from "./widgets/ProfileBox";
-import { DefaultBox } from "./components/DefaultBox";
-import { MainHeader } from "./components/MainHeader";
-import { MainHappyPost } from "./widgets/MainHappyPost";
+
+// 페이지
 
 function App() {
   return (
-    <>
-      <GNB user={{ name: "이혁" }} breadcrumbs={"메인 페이지"}></GNB>
-      <ProfileBox
-        user={{ name: "이혁", country: "대한민국", lang: "한국어" }}
-      ></ProfileBox>
-      <DefaultBox
-        title={"오늘의 감정 일기장"}
-        description={"오늘 하루 어떤 감정이었는지 아래 단어들을 선택해봐요."}
-        isButton={true}
-      ></DefaultBox>
-
-      <MainHeader></MainHeader>
-
-      <MainHappyPost></MainHappyPost>
-    </>
+    <Routes>
+      <Route element={<MainLayout></MainLayout>}>
+        <Route path="/" element={<MainPage></MainPage>}></Route>
+      </Route>
+    </Routes>
   );
 }
 

@@ -1,15 +1,13 @@
-import styled from "@emotion/styled";
-import { typo, palette } from "../shared/styles/index";
-import { Flex } from "../shared/utils/Wrapper";
 import { GNB } from "../../widgets/GNB";
-
-const Wrapper = styled(Flex)``;
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <Wrapper>
-      <GNB breadcrumbs={"메인 페이지"}></GNB>
-    </Wrapper>
+    <>
+      <GNB breadcrumbs={"메인 페이지"} user={{ name: "이혁" }}></GNB>
+
+      <Outlet />
+    </>
   );
 };
 

@@ -9,6 +9,7 @@ const Wrapper = styled(Flex)`
   height: 240px;
 
   border-radius: 20px;
+  border: 1px solid ${palette.Gray.gray10};
 
   background-color: ${palette.Gray.white};
   box-sizing: border-box;

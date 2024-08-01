@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10; // 스크롤하더라도 GNB가 가장 위에 있도록 설정함.
 
   .gnb-title {
