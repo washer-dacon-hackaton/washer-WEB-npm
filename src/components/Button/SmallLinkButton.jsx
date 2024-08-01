@@ -13,9 +13,9 @@ const Btn = styled.button`
   align-items: center;
 `;
 
-export const SmallLinkButton = ({ text }) => {
+export const SmallLinkButton = ({ text, action }) => {
   return (
-    <Btn>
+    <Btn onClick={action}>
       <div className="lbtn-text">{text}</div>
       <SmallArrow></SmallArrow>
     </Btn>
