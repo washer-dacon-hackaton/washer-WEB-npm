@@ -1,7 +1,7 @@
 import './App.css'
 import Box1 from "./components/Box1";
 import Box2board from "./components/Box2board";
-import Graphboard from "./components/Graphboard";
+import Graphboard from "./components/Report/Graphboard";
 
 
 function App() {

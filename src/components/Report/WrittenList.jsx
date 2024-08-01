@@ -1,6 +1,6 @@
 import './App.css'
 import Box3 from "./components/Report/Box3";
-import PostBox2 from './components/Report/PostBox2';
+import PostBox1 from './components/Report/PostBox1';
 
 function App() {
   const posts = [
@@ -9,9 +9,14 @@ function App() {
     { id: 3, title: '글 제목 3', content: '글 내용 3' },
   ];
 
-  // 좋아요 버튼 클릭 핸들러
+  // 수정 버튼 클릭 핸들러
   const handleEdit = (id) => {
-    console.log(`좋아요 클릭됨': ${id}`);
+    console.log(`수정 클릭됨: ${id}`);
+  };
+
+  // 삭제 버튼 클릭 핸들러
+  const handleDelete = (id) => {
+    console.log(`삭제 클릭됨: ${id}`);
   };
 
   return (
@@ -20,15 +25,15 @@ function App() {
     <section>
       <Box3></Box3>
     </section>
-    <h1>내가 좋아하는 글 목록</h1>
+    <h1>내가 쓴 글 목록</h1>
       <div style={styles.container}>
         {posts.map(post => (
-          <PostBox2
+          <PostBox1
             key={post.id}
             title={post.title}
             content={post.content}
-            onLike={() => handleEdit(post.id)}
-
+            onEdit={() => handleEdit(post.id)}
+            onDelete={() => handleDelete(post.id)}
           />
         ))}
       </div>
