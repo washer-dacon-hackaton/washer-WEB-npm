@@ -16,7 +16,7 @@ export const GlobalStyle = css`
     width: 100vw;
     min-width: 1080px;
     height: 100vh;
-    background-color: ${palette.Gray.white};
+    background-color: ${palette.Gray.gray10};
     font-family: "Pretendard";
     display: flex;
     flex-direction: column;

@@ -39,7 +39,7 @@ const LoginPage = () => {
     <Wrapper direction={"column"}>
       <Space height={120}></Space>
       <div className="login">
-        <img src={logo} width={"320px"} />
+        <img src={logo} width={"320px"} style={{ borderRadius: "100px" }} />
         <Space height={16}></Space>
         <div className="login-title">{LOGIN_TITLE}</div>
       </div>

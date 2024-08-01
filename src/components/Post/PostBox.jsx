@@ -35,6 +35,7 @@ const Wrapper = styled(Flex)`
 `;
 
 export const PostBox = ({ title, writer, created_at, content }) => {
+  const isWriter = localStorage.getItem("name") == writer;
   return (
     <Wrapper direction={"column"}>
       <div className="postbox-header">
@@ -46,7 +47,7 @@ export const PostBox = ({ title, writer, created_at, content }) => {
             <div>{created_at}</div>
           </div>
         </div>
-        <Like></Like>
+        {isWriter ? <div></div> : <Like></Like>}
       </div>
       <ContentBox text={content}></ContentBox>
     </Wrapper>
