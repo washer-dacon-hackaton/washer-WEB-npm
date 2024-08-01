@@ -18,5 +18,9 @@ export const GlobalStyle = css`
     height: 100vh;
     background-color: ${palette.Gray.white};
     font-family: "Pretendard";
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
   }
 `;

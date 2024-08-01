@@ -1,23 +1,23 @@
 import styled from "@emotion/styled";
 import { typo, palette } from "../../shared/styles/index";
-import { Arrow } from "../../assets/icons/Arrow";
+import { SmallArrow } from "../../assets/icons/SmallArrow";
 
 const Btn = styled.button`
-  ${typo.Body.b1};
+  ${typo.Body.b3};
   color: ${palette.Gray.gray70};
   background-color: transparent;
   padding: 0px;
 
   display: flex;
-  gap: 10px;
+  gap: 4px;
   align-items: center;
 `;
 
-export const LinkButton = ({ text }) => {
+export const SmallLinkButton = ({ text }) => {
   return (
     <Btn>
       <div className="lbtn-text">{text}</div>
-      <Arrow></Arrow>
+      <SmallArrow></SmallArrow>
     </Btn>
   );
 };

@@ -1,12 +1,29 @@
 import client from "./index";
 
 const happyPostAPI = {
-  GET_HAPPY_POST: async (id) => {
-    const response = await client.get(`/post/${id}`);
-    return response.data;
+  WRITE_HAPPY_POST: async (User, Title, Content) => {
+    const response = await client.post(`/posts/${User.name}/`, {
+      title: Title,
+      content: Content,
+    });
+    console.log("글쓰기 성공");
+    return response.data; // message, post_id
   },
-  EDIT_HAPPY_POST: async () => {}, // 수정은 급한 내용이 아니라 후순위로 미뤄서 작업함.
-  GET_POST_FEEDBACK: async () => {}, // 해당 글에 대한 피드백
+  GET_HAPPY_POST: async (User, Id) => {
+    const response = await client.get(`/post/${User}/`, {
+      post_id: Id,
+    });
+    console.log("글 가져오기 성공");
+    return response.data; // writer, created_at, title, content, ai_feedback
+  },
+
+  LIKE: async (User, Id) => {
+    const response = await client.patch(`/posts/${User.name}/`, {
+      post_id: Id,
+    });
+    console.log("좋아요 성공");
+    return response.data; // message
+  },
 };
 
 export default happyPostAPI;

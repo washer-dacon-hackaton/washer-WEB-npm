@@ -10,35 +10,35 @@ export const typo = {
       font-size: 64px;
       font-weight: 900;
       line-height: 150%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     h1: css`
       font-family: "Pretendard";
       font-size: 24px;
       font-weight: 700;
       line-height: 150%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     h2: css`
       font-family: "Pretendard";
       font-size: 20px;
       font-weight: 700;
       line-height: 130%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     h3: css`
       font-family: "Pretendard";
       font-size: 18px;
       font-weight: 700;
       line-height: 130%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     h4: css`
       font-family: "Pretendard";
       font-size: 16px;
       font-weight: 500;
       line-height: 130%;
-      letter-spacing: -1%;
+      letter-spacing: -0.01em;
     `,
   },
   Body: {
@@ -47,28 +47,28 @@ export const typo = {
       font-size: 20px;
       font-weight: 400;
       line-height: 130%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     b1: css`
       font-family: "Pretendard";
       font-size: 16px;
       font-weight: 400;
       line-height: 160%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     b2: css`
       font-family: "Pretendard";
       font-size: 14px;
       font-weight: 400;
       line-height: 130%;
-      letter-spacing: -2.5%;
+      letter-spacing: -0.025em;
     `,
     b3: css`
       font-family: "Pretendard";
       font-size: 12px;
       font-weight: 400;
       line-height: 130%;
-      letter-spacing: 0%;
+      letter-spacing: 0em;
     `,
   },
 };

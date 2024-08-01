@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { typo, palette } from "../../shared/styles/index";
 
-export const Button = styled.button`
+export const Emotion = styled.button`
   ${typo.Body.b2};
-  background-color: ${palette.Sub.blue};
-  color: ${palette.Gray.white};
+  background-color: ${palette.Gray.white};
+  color: ${palette.Gray.gray100};
 
   border-radius: 40px;
 `;

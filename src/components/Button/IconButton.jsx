@@ -3,9 +3,20 @@ import styled from "@emotion/styled";
 import { typo, palette } from "../../shared/styles/index";
 
 const Btn = styled.button`
-  ${typo.Body.b1};
+  display: flex;
+  gap: 8px;
+
+  border: 1px solid ${palette.Gray.gray70};
+  border-radius: 8px;
+
+  align-items: center;
+  justify-content: center;
+
+  ${typo.Body.b2};
   background-color: ${palette.Gray.white};
   color: ${palette.Gray.gray100};
+
+  paddding: 12px 16px;
 `;
 
 export const IconButton = ({ icon, text, link }) => {
