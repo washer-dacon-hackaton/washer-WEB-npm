@@ -7,7 +7,7 @@ const Wrapper = styled(Flex)`
   width: 1060px;
   padding: 20px;
   border-radius: 20px;
-  gap: 20px;
+  gap: 8px;
 
   background-color: ${palette.Gray.white};
   box-shadow: 0px 0px 4.2px 0px rgba(185, 185, 185, 0.57);
@@ -30,7 +30,7 @@ const Wrapper = styled(Flex)`
 export const DefaultBox = ({
   title,
   description,
-  body = null,
+  children,
   isButton = false,
 }) => {
   return (
@@ -39,8 +39,7 @@ export const DefaultBox = ({
         <div className="box-title">{title}</div>
         <div className="box-description">{description}</div>
       </div>
-
-      <div className="box-body">{body}</div>
+      {children}
       {isButton ? (
         <Button
           text={"작성 완료하기"}
