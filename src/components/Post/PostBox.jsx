@@ -3,6 +3,7 @@ import { typo, palette } from "../../shared/styles/index";
 import { Flex } from "../../shared/utils/Wrapper";
 import { ContentBox } from "../ContentBox";
 import { Like } from "../../assets/icons/Like";
+import char from "../../assets/character.jpeg";
 
 const Wrapper = styled(Flex)`
   background-color: ${palette.Gray.white};
@@ -18,6 +19,9 @@ const Wrapper = styled(Flex)`
     justify-content: space-between;
     align-items: center;
     .postbox-header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       .postbox-title {
         color: ${palette.Gray.gray100};
         ${typo.Head.h2};
@@ -35,8 +39,9 @@ const Wrapper = styled(Flex)`
 `;
 
 export const PostBox = ({ title, writer, created_at, content }) => {
+  const isWriter = localStorage.getItem("name") == writer;
   return (
-    <Wrapper direction={"column"}>
+    <Wrapper direction={"column"} align={"flex-start"}>
       <div className="postbox-header">
         <div className="postbox-header-left">
           <div className="postbox-title">{title}</div>
@@ -46,9 +51,18 @@ export const PostBox = ({ title, writer, created_at, content }) => {
             <div>{created_at}</div>
           </div>
         </div>
-        <Like></Like>
+        {isWriter ? <div></div> : <Like></Like>}
       </div>
-      <ContentBox text={content}></ContentBox>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "20px",
+        }}
+      >
+        <ContentBox title={""} text={content}></ContentBox>
+        <img src={char} width={"120px"}></img>
+      </div>
     </Wrapper>
   );
 };

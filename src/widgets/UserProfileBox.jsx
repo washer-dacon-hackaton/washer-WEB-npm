@@ -3,7 +3,7 @@ import { typo, palette } from "../shared/styles/index";
 import { Flex } from "../shared/utils/Wrapper";
 import profile from "../assets/Profile.png";
 import { Edit } from "../assets/icons/Edit";
-import { Like } from "../assets/icons/Like";
+import { Heart } from "../assets/icons/Heart";
 import { IconButton } from "../components/Button/IconButton";
 
 const Wrapper = styled(Flex)`
@@ -40,7 +40,15 @@ const Wrapper = styled(Flex)`
 export const ProfileBox = ({ user }) => {
   return (
     <Wrapper direction="column" align="center">
-      <img src={profile}></img> {/** 우선 유저 프로필을 기본 프로필로 */}
+      <img
+        src={profile}
+        width={240}
+        style={{
+          borderRadius: "20px",
+          border: `1px solid ${palette.Gray.gray70}`,
+        }}
+      ></img>{" "}
+      {/** 우선 유저 프로필을 기본 프로필로 */}
       <div className="profile-user">
         <div className="profile-user-name">{user.name}</div>
         <div className="profile-user-country">{user.country}</div>
@@ -50,16 +58,12 @@ export const ProfileBox = ({ user }) => {
         <IconButton
           icon={<Edit />}
           text={"내가 작성한 글 보기"}
-          link={() => {
-            alert("ㅋ");
-          }}
+          link={`/user/write/`}
         ></IconButton>
         <IconButton
-          icon={<Like />}
+          icon={<Heart />}
           text={"내가 좋아하는 글 보기"}
-          link={() => {
-            alert("ㅋ");
-          }}
+          link={`/user/like/`}
         ></IconButton>
       </div>
     </Wrapper>

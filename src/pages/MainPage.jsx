@@ -13,6 +13,7 @@ const Wrapper = styled(Flex)`
 const MainPage = () => {
   const setRoute = useSetAtom(routeAtom);
   useEffect(() => setRoute("메인 페이지"), [setRoute]);
+
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>

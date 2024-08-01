@@ -2,6 +2,8 @@ import styled from "@emotion/styled";
 import { typo, palette } from "../../shared/styles/index";
 import { Flex } from "../../shared/utils/Wrapper";
 import { Button } from "../Button/Button";
+import { MAIN_POST_DESC } from "../../shared/utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled(Flex)`
   background-color: ${palette.Gray.white};
@@ -22,15 +24,16 @@ const Wrapper = styled(Flex)`
 `;
 
 export const PostHeader = () => {
+  let navigate = useNavigate();
   return (
     <Wrapper justify={"space-between"}>
       <div className="happypost-header">
         <div className="happypost-title">{"행복 글"}</div>
-        <div className="happypost-description">
-          {"사소한 행복이라도 공유하며 어제보다 행복한 오늘이 되어봐요!"}
-        </div>
+        <div className="happypost-description">{MAIN_POST_DESC}</div>
       </div>
-      <Button>{"행복 글 작성하기"}</Button>
+      <Button onClick={() => navigate("/post/write")}>
+        {"행복 글 작성하기"}
+      </Button>
     </Wrapper>
   );
 };

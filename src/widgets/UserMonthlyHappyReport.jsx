@@ -11,7 +11,7 @@ const Wrapper = styled(Flex)`
 export const UserMonthlyHappyReport = () => {
   // const data = happyReportAPI.GET_ONE_REPORT();
   const data = {
-    score: 300,
+    score: 45,
     month: "2024년 8월",
     isMore: true,
   };
@@ -25,19 +25,21 @@ export const UserMonthlyHappyReport = () => {
           user={{ score: data.score }}
           month={data.month}
           isMore={true}
-          key={data.month}
         ></HappyScore>
         <HappyScore
           user={{ score: data.score }}
           month={data.month}
           isMore={true}
-          key={data.month}
         ></HappyScore>
         <HappyScore
           user={{ score: data.score }}
           month={data.month}
           isMore={true}
-          key={data.month}
+        ></HappyScore>
+        <HappyScore
+          user={{ score: data.score }}
+          month={data.month}
+          isMore={true}
         ></HappyScore>
       </Wrapper>
     </DefaultBox>

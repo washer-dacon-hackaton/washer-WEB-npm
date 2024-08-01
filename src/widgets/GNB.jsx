@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpeg";
 import { typo, palette } from "../shared/styles/index";
+import { Button } from "../components/Button/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -35,15 +37,24 @@ const Wrapper = styled.div`
   }
 `;
 
-export const GNB = (props) => {
+export const GNB = ({ breadcrumbs }) => {
+  const user = localStorage.getItem("name");
+  let navigate = useNavigate();
+
   return (
     <Wrapper>
       <div className="gnb-title">
-        <img src={logo} alt={"우리행복"} width={"90px"} height={"26px"}></img>
-        <div>{props?.breadcrumbs}</div>{" "}
+        <Link to="/">
+          <img src={logo} alt={"우리행복"} width={"90px"}></img>
+        </Link>
+        <div>{breadcrumbs}</div>{" "}
         {/** 상태 관리를 통해서 breadcrumbs 관리해야 할듯 ? */}
       </div>
-      <div className="gnb-user">{props?.user.name} 님</div>
+      {user ? (
+        <div className="gnb-user">{user} 님</div>
+      ) : (
+        <Button onClick={() => navigate("/login")}>로그인</Button>
+      )}
     </Wrapper>
   );
 };

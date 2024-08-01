@@ -1,13 +1,20 @@
 import styled from "@emotion/styled";
 import { Flex, Space } from "../shared/utils/Wrapper";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_drawing.png";
 import { typo, palette } from "../shared/styles";
 
 import userAPI from "../apis/userAPI";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useSetAtom } from "jotai";
+import { routeAtom } from "../shared/atom";
+import { LOGIN_TITLE } from "../shared/utils/constants";
+
 const LoginPage = () => {
+  const setRoute = useSetAtom(routeAtom);
+  useEffect(() => setRoute("로그인 페이지"), [setRoute]);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,7 +27,8 @@ const LoginPage = () => {
 
     if (data.success == true) {
       localStorage.clear();
-      localStorage.setItem("user", { name: data.nickname });
+      localStorage.setItem("name", data.nickname);
+      localStorage.setItem("lang", "한국어");
       console.log("성공");
     } else {
       console.log("실패");
@@ -32,9 +40,9 @@ const LoginPage = () => {
     <Wrapper direction={"column"}>
       <Space height={120}></Space>
       <div className="login">
-        <img src={logo} width={"240px"} />
+        <img src={logo} width={"320px"} style={{ borderRadius: "100px" }} />
         <Space height={16}></Space>
-        <div className="login-title">{"우리행복 | 우울이 행복이 되도록"}</div>
+        <div className="login-title">{LOGIN_TITLE}</div>
       </div>
       <Space height={40}></Space>
 
@@ -42,7 +50,7 @@ const LoginPage = () => {
         <div className="login-input">
           <Input
             id={"email"}
-            pl={"이메일을 입력해주세요."}
+            placeholder={"이메일을 입력해주세요."}
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +58,7 @@ const LoginPage = () => {
           ></Input>
           <Input
             id={"password"}
-            pl={"비밀번호를 입력해주세요."}
+            placeholder={"비밀번호를 입력해주세요."}
             type="text"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

@@ -11,6 +11,7 @@ import UserWritePage from "./pages/UserWritePage";
 
 import "./App.css";
 import PostPage from "./pages/PostPage";
+import PostWritePage from "./pages/PostWritePage";
 import ReportPage from "./pages/ReportPage";
 
 // 페이지
@@ -29,6 +30,10 @@ function App() {
           element={<UserWritePage></UserWritePage>}
         ></Route>
         <Route path="/login" element={<LoginPage></LoginPage>}></Route>
+        <Route
+          path={`/post/write`}
+          element={<PostWritePage></PostWritePage>}
+        ></Route>
         <Route path={`/post/:id`} element={<PostPage></PostPage>}></Route>
         <Route path={`/test`} element={<TestPage></TestPage>}></Route>
         <Route
