@@ -11,7 +11,7 @@ function CalendarGraph() {
 
   return (
     <div className="calendar-container">
-      <h1 style={{ fontSize: 25 }}>__월의 감정기록</h1>
+      <h1 style={{ fontSize: 18,marginTop:50 }}>__월의 감정기록</h1>
       <Space height={20} />
       <div className="calendar-box">
         {Array.from({ length: 31 }, (_, index) => (

@@ -23,7 +23,8 @@ const Box2 = () => {
   return (
     <div style={containerStyle}>
       <div style={boxStyle}>
-        행복점수
+        <h1 style={{fontWeight:"bold",fontSize:25}}>행복점수</h1>
+        <h1 style={{fontSize:35,textAlign:"center",marginTop:30,fontWeight:"bold"}}>점수</h1>
       </div>
     </div>
   );

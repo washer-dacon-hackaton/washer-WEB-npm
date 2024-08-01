@@ -34,7 +34,8 @@ const options = {
 
 function WordCloud() {
   return (
-    <div style={{ height: "400px", width: '100%' }}> {/* Adjusted height */}
+    <div style={{ marginTop:30,marginBottom:20,height: "400px", width: '100%' }}> {/* Adjusted height */}
+      <h1 style={{fontSize:18, textAlign:"center",marginBottom:-2}}>내가 쓴 행복 키워드</h1>
       <ReactWordcloud words={words} options={options} />
     </div>
   );
