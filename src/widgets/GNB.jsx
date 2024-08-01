@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpeg";
 import { typo, palette } from "../shared/styles/index";
 import { Button } from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ export const GNB = ({ breadcrumbs }) => {
   return (
     <Wrapper>
       <div className="gnb-title">
-        <img src={logo} alt={"우리행복"} width={"90px"} height={"26px"}></img>
+        <img src={logo} alt={"우리행복"} width={"90px"}></img>
         <div>{breadcrumbs}</div>{" "}
         {/** 상태 관리를 통해서 breadcrumbs 관리해야 할듯 ? */}
       </div>
