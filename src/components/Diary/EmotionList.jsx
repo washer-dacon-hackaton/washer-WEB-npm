@@ -3,7 +3,7 @@ import { typo, palette } from "../../shared/styles/index";
 import { Flex } from "../../shared/utils/Wrapper";
 import { Button } from "../Button/Button";
 import { Emotion } from "../Button/Emotion";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const Input = styled.input`
   box-sizing: border-box;
@@ -19,7 +19,7 @@ const Wrapper = styled(Flex)`
 
 export const EmotionList = () => {
   let [option, setOption] = useState("");
-  const data = [];
+  const data = useMemo(() => {});
   let [list, setList] = useState([]);
   let [componentList, setComponentList] = useState(<div></div>);
 
