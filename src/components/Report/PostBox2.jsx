@@ -6,7 +6,7 @@ function PostBox({ title, content, onLike }) {
       <h3>{title}</h3>
       <p>{content}</p>
       <div style={styles.buttonContainer}>
-        <button style={styles.button} onClick={() => alert('더보기 클릭됨')}>
+        <button style={styles.button} onClick={() => console.log('더보기 클릭됨')}>
           더보기 {" >"} 
         </button>
         <button style={styles.likeButton} onClick={onLike}>
@@ -19,10 +19,10 @@ function PostBox({ title, content, onLike }) {
 
 const styles = {
   box: {
-    width: "840px",
-    height: "138px",
+    width: "800px",
+    height: "100px",
     padding: "20px",
-    borderRadius: "5px",
+    borderRadius: "20px 20px 20px 20px",
     border: "1px solid black", 
     display: "flex",
     flexDirection: "column",

@@ -1,5 +1,4 @@
 import './App.css'
-import Box3 from "./components/Report/Box3";
 import PostBox2 from './components/Report/PostBox2';
 
 function App() {
@@ -16,10 +15,6 @@ function App() {
 
   return (
     <div className="App">
-    <h1> 우리행복</h1>
-    <section>
-      <Box3></Box3>
-    </section>
     <h1>내가 좋아하는 글 목록</h1>
       <div style={styles.container}>
         {posts.map(post => (
