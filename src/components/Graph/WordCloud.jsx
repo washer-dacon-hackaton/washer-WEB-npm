@@ -1,26 +1,23 @@
 import ReactWordcloud from 'react-wordcloud';
 
 const words = [
-  { text: 'told', value: 80 },
-  { text: 'mistake', value: 20 },
-  { text: 'thought', value: 30 },
-  { text: 'bad', value: 90 },
-  { text: 'told', value: 20 },
-  { text: 'mistake', value: 10 },
-  { text: 'thought', value: 230 },
-  { text: 'bad', value: 190 },
-  { text: 'told', value: 10 },
-  { text: 'mistake', value: 250 },
-  { text: 'thought', value: 90 },
-  { text: 'bad', value: 270 },
-  { text: 'told', value: 20 },
-  { text: 'mistake', value: 450 },
-  { text: 'thought', value: 330 },
-  { text: 'bad', value: 290 },
-  { text: 'told', value: 800 },
-  { text: 'mistake', value: 5 },
-  { text: 'thought', value: 3 },
-  { text: 'bad', value: 9 },
+  { text: '기쁘다', value: 80 },
+  { text: '친구', value: 20 },
+  { text: '가족', value: 30 },
+  { text: '여행', value: 90 },
+  { text: '부모님', value: 20 },
+  { text: '선생님', value: 10 },
+  { text: '여행', value: 230 },
+  { text: '엠티', value: 190 },
+  { text: '더위', value: 10 },
+  { text: '선물', value: 150 },
+  { text: '지하철', value: 90 },
+  {text:"습하다",value:20},
+  {text:"더럽다",value:10},
+  {text:"사랑",value:100},
+  {text:"짜증",value:30},
+  {text:"불쾌",value:40}
+
 ];
 
 const options = {
