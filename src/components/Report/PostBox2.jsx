@@ -1,14 +1,16 @@
+import styled from "@emotion/styled";
 import { Like } from "../../assets/icons/Like"; 
+import { Button } from "../Button/Button"; // Button 컴포넌트 경로에 맞게 수정
 
-function PostBox({ title, content, onLike }) {
+function PostBox2({ title, content, onLike }) {
   return (
     <div style={styles.box}>
       <h3>{title}</h3>
       <p>{content}</p>
       <div style={styles.buttonContainer}>
-        <button style={styles.button} onClick={() => console.log('더보기 클릭됨')}>
+        <Button onClick={() => console.log('더보기 클릭됨')}>
           더보기 {" >"} 
-        </button>
+        </Button>
         <button style={styles.likeButton} onClick={onLike}>
           <Like />
         </button>
@@ -22,25 +24,16 @@ const styles = {
     width: "800px",
     height: "100px",
     padding: "20px",
-    borderRadius: "20px 20px 20px 20px",
+    borderRadius: "20px",
     border: "1px solid black", 
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-
   },
   buttonContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  button: {
-    backgroundColor: 'green',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    padding: '5px 10px',
-    cursor: 'pointer',
   },
   likeButton: {
     backgroundColor: 'transparent',
@@ -49,4 +42,4 @@ const styles = {
   }
 };
 
-export default PostBox;
+export default PostBox2;

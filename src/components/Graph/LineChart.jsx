@@ -30,12 +30,12 @@ const data1 = {
   datasets: [
     {
       label: "행복점수",
-      data: [32, 50, 45, 30, 20, 10, 20],
+      data: [32, 50, 45, 30, 20, 10, 50],
       backgroundColor: "rgba(12, 211, 255, 0.2)", // Semi-transparent background
-      borderColor: "#0CD3FF",
+      borderColor: "#8f00ff",
       borderWidth: 3, // Thicker line
       pointBackgroundColor: "#fff",
-      pointBorderColor: "#0CD3FF",
+      pointBorderColor: "##8f00ff",
       pointBorderWidth: 2,
       pointRadius: 6, // Larger data points
       fill: true, // Fill area under the line

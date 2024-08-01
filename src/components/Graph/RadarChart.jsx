@@ -11,14 +11,14 @@ const data = [
 
 function RadarChart() {
     return (
-        <div style={{ height: "400px", width: '100%' }}> {/* Adjusted height */}
+        <div style={{ height: "500px", width: '100%' }}> {/* Adjusted height */}
             <h1 style={{fontSize:18,textAlign:"center"}}>한달동안 내가 선택한 단어</h1>
             <ResponsiveRadar
                 data={data}
                 keys={[" "]}
                 indexBy="taste"
                 valueFormat=">-.2f"
-                margin={{ top: 70, right: 80, bottom: 60, left: 80 }}
+                margin={{ top: 0, right: 80, bottom: 60, left: 80 }}
                 borderColor={{ from: 'color' }}
                 gridLabelOffset={36}
                 dotSize={5}

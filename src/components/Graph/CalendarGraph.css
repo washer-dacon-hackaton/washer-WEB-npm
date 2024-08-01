@@ -11,8 +11,9 @@
   border: 2px solid #ccc; /* 큰 네모 박스의 테두리 */
   padding: 10px;
   box-sizing: border-box;
-  background-color: #9ceeeb; /* 큰 네모 박스의 배경색 */
+  background-color: #874cc5; /* 큰 네모 박스의 배경색 */
   margin: 0 auto; /* 중앙 정렬 */
+  border-radius: 10px;
 }
 
 .day-box {
