@@ -7,4 +7,5 @@ export const Button = styled.button`
   color: ${palette.Gray.white};
 
   border-radius: 40px;
+  display: inline-block;
 `;

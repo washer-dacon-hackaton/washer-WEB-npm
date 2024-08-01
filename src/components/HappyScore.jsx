@@ -32,10 +32,7 @@ export const HappyScore = ({ user, month, isMore }) => {
       <div className="score-month">{monthString}</div>
       <div className="score-num">{user.score}</div>
       {isMore ? (
-        <LinkButton
-          text={"자세히 보기"}
-          onClick={() => alert("ㅋ")}
-        ></LinkButton>
+        <LinkButton text={"자세히 보기"} link={`/user/report/1`}></LinkButton>
       ) : (
         <></>
       )}

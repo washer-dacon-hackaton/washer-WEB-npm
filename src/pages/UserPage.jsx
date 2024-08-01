@@ -6,6 +6,7 @@ import { UserMonthlyHappyReport } from "../widgets/UserMonthlyHappyReport";
 import { useSetAtom } from "jotai";
 import { routeAtom } from "../shared/atom";
 import { useEffect } from "react";
+import { EmotionList } from "../components/Diary/EmotionList";
 
 const Wrapper = styled(Flex)`
   gap: 40px;
@@ -15,7 +16,8 @@ const MainPage = () => {
   const setRoute = useSetAtom(routeAtom);
   useEffect(() => setRoute("유저 페이지"), [setRoute]);
 
-  const user = localStorage.getItem("name");
+  let user = localStorage.getItem("name");
+  user = "이혁";
 
   return (
     <Wrapper direction={"column"}>
@@ -26,8 +28,9 @@ const MainPage = () => {
       <DefaultBox
         title={"오늘의 감정 일기장"}
         description={"오늘 하루 어떤 감정이었는지 기록해봐요."}
-        isButton={true}
-      ></DefaultBox>
+      >
+        <EmotionList></EmotionList>
+      </DefaultBox>
       <UserMonthlyHappyReport></UserMonthlyHappyReport>
     </Wrapper>
   );

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { typo, palette } from "../../shared/styles/index";
 import { Arrow } from "../../assets/icons/Arrow";
+import { useNavigate } from "react-router-dom";
 
 const Btn = styled.button`
   ${typo.Body.b1};
@@ -13,9 +14,14 @@ const Btn = styled.button`
   align-items: center;
 `;
 
-export const LinkButton = ({ text }) => {
+export const LinkButton = ({ text, link }) => {
+  let navigate = useNavigate();
   return (
-    <Btn>
+    <Btn
+      onClick={() => {
+        navigate(link);
+      }}
+    >
       <div className="lbtn-text">{text}</div>
       <Arrow></Arrow>
     </Btn>

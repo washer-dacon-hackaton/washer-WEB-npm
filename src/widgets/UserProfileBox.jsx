@@ -3,9 +3,8 @@ import { typo, palette } from "../shared/styles/index";
 import { Flex } from "../shared/utils/Wrapper";
 import profile from "../assets/Profile.png";
 import { Edit } from "../assets/icons/Edit";
-import { Like } from "../assets/icons/Like";
+import { Heart } from "../assets/icons/Heart";
 import { IconButton } from "../components/Button/IconButton";
-import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled(Flex)`
   box-shadow: 0px 0px 4.2px 0px rgba(185, 185, 185, 0.57);
@@ -39,10 +38,10 @@ const Wrapper = styled(Flex)`
 `;
 
 export const ProfileBox = ({ user }) => {
-  let navigate = useNavigate();
   return (
     <Wrapper direction="column" align="center">
-      <img src={profile}></img> {/** 우선 유저 프로필을 기본 프로필로 */}
+      <img src={profile} width={240} style={{ borderRadius: "20px" }}></img>{" "}
+      {/** 우선 유저 프로필을 기본 프로필로 */}
       <div className="profile-user">
         <div className="profile-user-name">{user.name}</div>
         <div className="profile-user-country">{user.country}</div>
@@ -52,12 +51,12 @@ export const ProfileBox = ({ user }) => {
         <IconButton
           icon={<Edit />}
           text={"내가 작성한 글 보기"}
-          link={navigate(`/user/write/`)}
+          link={`/user/write/`}
         ></IconButton>
         <IconButton
-          icon={<Like />}
+          icon={<Heart />}
           text={"내가 좋아하는 글 보기"}
-          link={navigate(`/user/like/`)}
+          link={`/user/like/`}
         ></IconButton>
       </div>
     </Wrapper>

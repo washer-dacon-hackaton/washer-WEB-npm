@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 // import { useNavigate } from "react-router-dom";
 import { typo, palette } from "../../shared/styles/index";
+import { useNavigate } from "react-router-dom";
 
 const Btn = styled.button`
   display: flex;
@@ -20,8 +21,9 @@ const Btn = styled.button`
 `;
 
 export const IconButton = ({ icon, text, link }) => {
+  let navigate = useNavigate();
   return (
-    <Btn onClick={() => link}>
+    <Btn onClick={() => navigate(link)}>
       {icon}
       <div className="ibtn-text">{text}</div>
     </Btn>

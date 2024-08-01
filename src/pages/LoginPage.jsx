@@ -27,7 +27,8 @@ const LoginPage = () => {
 
     if (data.success == true) {
       localStorage.clear();
-      localStorage.setItem("user", { name: data.nickname });
+      localStorage.setItem("name", data.nickname);
+      localStorage.setItem("lang", "한국어");
       console.log("성공");
     } else {
       console.log("실패");
