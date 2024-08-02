@@ -7,44 +7,54 @@ const Wrapper = styled(Flex)`
 `;
 
 const UserLikePage = () => {
-
   const posts = [
-    { id: 1, title: '글 제목 1', content: '글 내용 1' },
-    { id: 2, title: '글 제목 2', content: '글 내용 2' },
-    { id: 3, title: '글 제목 3', content: '글 내용 3' },
+    {
+      id: 1,
+      title: "비 맞으면서 집에 왔는데",
+      content: "비가 딱 그쳤어. 나를 위한 영화같은 타이밍이었구나..ㅎㅎ",
+    },
+    {
+      id: 2,
+      title: "빨래를 말렸다.",
+      content:
+        "수업시간에 필기를 놓치지 않았다. 지하철 타자마자 내 앞사람 내려서 바로 앉았다. 강아지풀을 오랜만에 보았다. 어릴 때 보고 정말 오랜만. ",
+    },
+    {
+      id: 3,
+      title: "나 오늘 생일인데,,",
+      content:
+        "날 새서 해커톤 하고있어.. ㅎㅎ 이런 경험 어디서 하니. 난 영광이야",
+    },
   ];
   const handleEdit = (id) => {
     console.log(`좋아요 클릭됨': ${id}`);
   };
 
-  
   return (
     <Wrapper direction={"column"}>
       <Space height={80}></Space>
 
       <div style={styles.container}>
-        {posts.map(post => (
+        {posts.map((post) => (
           <PostBox2
             key={post.id}
             title={post.title}
             content={post.content}
             onLike={() => handleEdit(post.id)}
-
           />
         ))}
-        </div>
+      </div>
     </Wrapper>
   );
 };
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection:"column",
-    gap: '10px',
-    alignItems: 'center',
-  }
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    alignItems: "center",
+  },
 };
-
 
 export default UserLikePage;
